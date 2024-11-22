@@ -1,0 +1,181 @@
+/* Contenedor principal que ocupa toda la pantalla */
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #2ecc71,
+        #27ae60,
+        #16a085,
+        #1abc9c
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.intro-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.1) 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 0, 30px -30px, 0px 30px;
+    animation: patternMove 20s linear infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0, 30px 0, 30px -30px, 0px 30px;
+    }
+    100% {
+        background-position: 60px 60px, 90px 60px, 90px 30px, 60px 90px;
+    }
+}
+
+/* Mantén el resto de tus estilos igual */
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: logoBounce 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes logoBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.company-name {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: textFadeIn 3s ease-out;
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contenido central: logo y nombre de la empresa */
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación para hacer que el contenido aparezca de forma suave */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del logo */
+.company-logo {
+    width: 300px; /* Ajusta el tamaño del logo según lo necesites */
+    height: auto;
+    margin-bottom: 20px;
+    animation: logoBounce 1.5s ease-in-out infinite alternate;
+}
+
+/* Animación para el logo (rebote) */
+@keyframes logoBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el nombre de la empresa */
+.company-name {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: textFadeIn 3s ease-out;
+}
+
+/* Animación para el nombre de la empresa */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

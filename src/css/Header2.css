@@ -1,0 +1,25 @@
+.empresa-header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #000000, #434343);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed; /* Fija el header */
+    top: 0; /* Posición en la parte superior */
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+.empresa-nombre {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}

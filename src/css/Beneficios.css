@@ -1,0 +1,58 @@
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  color: #2E7D32; /* Verde oscuro para un encabezado destacado */
+  margin-bottom: 20px;
+}
+
+.benefit-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: #e8f5e9; /* Verde claro para dar sensación de frescura */
+  padding: 15px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #388E3C; /* Verde intermedio */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555; /* Gris oscuro para un texto legible */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+.productos-button {
+  background-color: #2E7D32; /* Verde oscuro para consistencia */
+  color: white;
+  font-size: 1.125rem; /* text-lg equivalent */
+  font-weight: bold;
+  padding: 1.5rem 1.5rem; /* Increased top padding */
+  border-radius: 0.5rem; /* rounded-lg equivalent */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md equivalent */
+  transition: all 0.3s ease;
+  margin-top: 2rem; /* Added margin to separate from content above */
+ }
+ 
+ .productos-button:hover {
+  background-color: #388E3C; /* hover:bg-green-700 equivalent */
+  transform: scale(1.05); /* hover:scale-105 equivalent */
+ }

@@ -1,0 +1,72 @@
+.about-container {
+  margin: 50px auto;
+  padding: 40px 20px 100px; /* Ajuste del padding inferior */
+  width: 80%;
+  max-width: 900px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 248, 255, 0.8));
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Crecimiento al pasar el mouse */
+.about-container:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Mejora la sombra al hacer hover */
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #2a7f62;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  text-align: center; /* Centrar el contenido del texto y botón */
+}
+
+.about-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-block; /* Asegura que tome solo el espacio del texto */
+}
+
+.about-button:hover {
+  transform: scale(1.1);
+  background-color: #218838;
+}
+
+.about-button:focus {
+  outline: none;
+}

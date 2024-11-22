@@ -1,0 +1,202 @@
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.intro-section {
+    padding: 80px 20px;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8f9ff 25%,
+        #f0f2ff 50%,
+        #e8eaff 75%,
+        #e0e4ff 100%
+    );
+    background-size: 200% 200%; /* Permite que el gradiente se mueva */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+
+    /* Aplica la animación */
+    animation: moveBackground 10s linear infinite;
+}
+
+/* Efecto de ondas sutiles en el fondo */
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.1) 75%,
+        transparent 75%
+    );
+    background-size: 100px 100px;
+    opacity: 0.5;
+}
+
+.intro-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section.visible .intro-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.intro-section.visible .intro-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-description p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+.intro-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.intro-section.visible .intro-features {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 10px 15px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 6px 8px rgba(0, 0, 0, 0.05),
+        0 12px 18px rgba(0, 0, 0, 0.1);
+}
+
+.feature-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3a9d5d, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+
+.feature-text {
+    font-size: 1.1rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* Efecto de brillo en el hover de las características */
+.feature::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.feature:hover::after {
+    opacity: 1;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 2.2rem;
+    }
+
+    .intro-description p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .intro-features {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .feature {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

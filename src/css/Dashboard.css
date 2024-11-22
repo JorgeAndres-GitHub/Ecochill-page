@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(45deg, #e6f7e6, #99ff99, #e6f7e6); /* Gradiente con 3 colores */
+    background-size: 300% 300%; /* Esto asegura que el gradiente ocupe más espacio para animarlo */
+    animation: gradientMove 5s ease infinite; /* Animación que mueve el gradiente */
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes del body */
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
