@@ -12,21 +12,18 @@ export function Productos() {
       id: 1,
       nombre: "Caja EcoChill",
       descripcion: "Caja ideal para transporte de frutas y verduras pequeñas.",
-      precio: 1500000,
       imagen: box1,
     },
     {
       id: 2,
       nombre: "Garantia adicional",
       descripcion: "Garantia extendida para cobertura contra cualquier tipo de daño por 1 año.",
-      precio: 700000,
       imagen: garantia,
     },
     {
       id: 3,
       nombre: "Cuota de reparación",
       descripcion: "Reparación de piezas dañadas, reemplazo de componentes o ajustes en la estructura de la caja.",
-      precio: 200000,
       imagen: reparacion,
     }
   ];
@@ -94,14 +91,11 @@ export function Productos() {
               <h2>{producto.nombre}</h2>
               <p>{producto.descripcion}</p>
               <div className="producto-footer">
-                <span className="producto-precio">
-                  ${producto.precio.toFixed(2)}
-                </span>
                 <button
                   className="producto-boton"
                   onClick={() => handleComprar(producto)}
                 >
-                  Realizar solicitud
+                  Obtener información
                 </button>
               </div>
             </div>
