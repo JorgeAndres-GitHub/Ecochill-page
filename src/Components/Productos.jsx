@@ -101,7 +101,7 @@ export function Productos() {
                   className="producto-boton"
                   onClick={() => handleComprar(producto)}
                 >
-                  Realizar pedido
+                  Realizar solicitud
                 </button>
               </div>
             </div>
