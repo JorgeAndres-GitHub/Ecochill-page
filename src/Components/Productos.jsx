@@ -70,7 +70,7 @@ export function Productos() {
     // Mostrar mensaje final tras ingresar el correo
     if (email) {
       await Swal.fire(
-        "Pedido realizado",
+        "Solicitud realizado",
         `Gracias por tu interés, ${email}. Nos comunicaremos contigo pronto.`,
         "success"
       );
